@@ -20,8 +20,8 @@ using System.Runtime.CompilerServices;
     + "3cbbf6c686e140a1757aa0c22d7a9e5730984dcc004d5a8d437eba575d2d6a035fa210cd15ec88"
     + "58d04b9e")]
 
-[assembly: AssemblyVersion("1.1.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: AssemblyVersion("1.1.0.1")]
+[assembly: AssemblyFileVersion("1.1.0.1")]
 
 [assembly: NeutralResourcesLanguageAttribute("en")]
 
