@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Forms;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
+//using Microsoft.WindowsAPICodePack.Shell.Interop;
 using Microsoft.WindowsAPICodePack.Shell.Resources;
 using Microsoft.WindowsAPICodePack.Shell;
 
@@ -45,7 +45,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         /// <exception cref="System.ArgumentException">If the tabbed thumbnail has already been added</exception>
         public void AddThumbnailPreview(TabbedThumbnail preview)
         {
-            if (preview == null) { throw new ArgumentNullException("preview"); }
+            if (preview == null)
+            { throw new ArgumentNullException("preview"); }
 
             // UI Element has a windowHandle of zero.
             if (preview.WindowHandle == IntPtr.Zero)
@@ -191,7 +192,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         /// is to be removed from the taskbar</param>
         public void RemoveThumbnailPreview(UIElement windowsControl)
         {
-            if (windowsControl == null) { throw new ArgumentNullException("windowsControl"); }
+            if (windowsControl == null)
+            { throw new ArgumentNullException("windowsControl"); }
 
             if (!_tabbedThumbnailCacheWPF.ContainsKey(windowsControl))
             {
@@ -224,7 +226,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         /// <exception cref="System.ArgumentException">If the control/window is not yet added to the tabbed thumbnails list</exception>
         public void SetActiveTab(TabbedThumbnail preview)
         {
-            if (preview == null) { throw new ArgumentNullException("preview"); }
+            if (preview == null)
+            { throw new ArgumentNullException("preview"); }
 
             if (preview.WindowHandle != IntPtr.Zero)
             {
@@ -334,7 +337,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 throw new ArgumentException(LocalizedMessages.ThumbnailManagerInvalidHandle, "windowHandle");
             }
 
-            return _tabbedThumbnailCache.ContainsKey(windowHandle);            
+            return _tabbedThumbnailCache.ContainsKey(windowHandle);
         }
 
         /// <summary>

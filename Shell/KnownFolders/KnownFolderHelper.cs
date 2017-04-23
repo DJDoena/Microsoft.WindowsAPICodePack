@@ -18,9 +18,9 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <param name="pidl"></param>
         /// <returns></returns>
         internal static IKnownFolderNative FromPIDL(IntPtr pidl)
-        {            
+        {
             KnownFolderManagerClass knownFolderManager = new KnownFolderManagerClass();
-            
+
             IKnownFolderNative knownFolder;
             HResult hr = knownFolderManager.FindFolderFromIDList(pidl, out knownFolder);
 
@@ -39,7 +39,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             KnownFolderManagerClass knownFolderManager = new KnownFolderManagerClass();
 
             HResult hr = knownFolderManager.GetFolder(knownFolderId, out knownFolderNative);
-            if (hr != HResult.Ok) { throw new ShellException(hr); }
+            if (hr != HResult.Ok)
+            { throw new ShellException(hr); }
 
             IKnownFolder kf = GetKnownFolder(knownFolderNative);
             if (kf == null)
@@ -79,7 +80,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             Guid guid = new Guid(ShellIIDGuid.IShellItem2);
             HResult hr = knownFolderNative.GetShellItem(0, ref guid, out shellItem);
 
-            if (!CoreErrorHelper.Succeeded(hr)) { return null; }
+            if (!CoreErrorHelper.Succeeded(hr))
+            { return null; }
 
             bool isFileSystem = false;
 

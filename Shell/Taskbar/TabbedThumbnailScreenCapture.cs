@@ -27,10 +27,11 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         /// <returns>A screen capture of the window.</returns>        
         public static Bitmap GrabWindowBitmap(IntPtr windowHandle, System.Drawing.Size bitmapSize)
         {
-            if (bitmapSize.Height <= 0 || bitmapSize.Width <= 0) { return null; }
+            if (bitmapSize.Height <= 0 || bitmapSize.Width <= 0)
+            { return null; }
 
             IntPtr windowDC = IntPtr.Zero;
-             
+
             try
             {
                 windowDC = TabbedThumbnailNativeMethods.GetWindowDC(windowHandle);
@@ -42,14 +43,14 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 {
                     realWindowSize = new System.Drawing.Size(200, 200);
                 }
-                
+
                 System.Drawing.Size size = (bitmapSize == System.Drawing.Size.Empty) ?
                         realWindowSize : bitmapSize;
-                
+
                 Bitmap targetBitmap = null;
                 try
                 {
-                    
+
 
                     targetBitmap = new Bitmap(size.Width, size.Height);
 
@@ -67,14 +68,16 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
 
                         targetGr.ReleaseHdc(targetDC);
 
-                        if (!success) { return null; }
+                        if (!success)
+                        { return null; }
 
                         return targetBitmap;
                     }
                 }
                 catch
                 {
-                    if (targetBitmap != null) { targetBitmap.Dispose(); }
+                    if (targetBitmap != null)
+                    { targetBitmap.Dispose(); }
                     throw;
                 }
             }
@@ -83,7 +86,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 if (windowDC != IntPtr.Zero)
                 {
                     TabbedThumbnailNativeMethods.ReleaseDC(windowHandle, windowDC);
-                }                
+                }
             }
         }
 

@@ -22,7 +22,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         private INativeShellLibrary nativeShellLibrary;
         private IKnownFolder knownFolder;
 
-        private static Guid[] FolderTypesGuids = 
+        private static Guid[] FolderTypesGuids =
         {
             new Guid(ShellKFIDGuid.GenericLibrary),
             new Guid(ShellKFIDGuid.DocumentsLibrary),
@@ -531,7 +531,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             staWorker.Start();
             staWorker.Join();
 
-            if (!CoreErrorHelper.Succeeded(hr)) { throw new ShellException(hr); }
+            if (!CoreErrorHelper.Succeeded(hr))
+            { throw new ShellException(hr); }
         }
 
         /// <summary>
@@ -608,7 +609,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <param name="item">The folder to add to the library.</param>
         public void Add(ShellFileSystemFolder item)
         {
-            if (item == null) { throw new ArgumentNullException("item"); }
+            if (item == null)
+            { throw new ArgumentNullException("item"); }
 
             nativeShellLibrary.AddFolder(item.NativeShellItem);
             nativeShellLibrary.Commit();
@@ -649,7 +651,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <returns><B>true</B> if the item was removed.</returns>
         public bool Remove(ShellFileSystemFolder item)
         {
-            if (item == null) { throw new ArgumentNullException("item"); }
+            if (item == null)
+            { throw new ArgumentNullException("item"); }
 
             try
             {
@@ -720,7 +723,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
 
             HResult hr = nativeShellLibrary.GetFolders(ShellNativeMethods.LibraryFolderFilter.AllItems, ref shellItemArrayGuid, out itemArray);
 
-            if (!CoreErrorHelper.Succeeded(hr)) { return list; }
+            if (!CoreErrorHelper.Succeeded(hr))
+            { return list; }
 
             uint count;
             itemArray.GetCount(out count);

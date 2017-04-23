@@ -9,7 +9,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
 {
     internal sealed class TabbedThumbnailProxyWindow : Form, IDisposable
     {
-        
+
         internal TabbedThumbnailProxyWindow(TabbedThumbnail preview)
         {
             TabbedThumbnail = preview;
@@ -21,8 +21,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             }
 
             if (preview.WindowsControl != null)
-            {                
-                WindowsControl = preview.WindowsControl;            
+            {
+                WindowsControl = preview.WindowsControl;
             }
         }
 
@@ -48,7 +48,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             {
                 base.WndProc(ref m);
             }
-            else if (!handled) { base.WndProc(ref m); }
+            else if (!handled)
+            { base.WndProc(ref m); }
         }
 
         #region IDisposable Members
@@ -75,10 +76,11 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             if (disposing)
             {
                 // Dispose managed resources
-                if (TabbedThumbnail != null) { TabbedThumbnail.Dispose(); }
+                if (TabbedThumbnail != null)
+                { TabbedThumbnail.Dispose(); }
 
                 TabbedThumbnail = null;
-                
+
                 WindowsControl = null;
             }
 

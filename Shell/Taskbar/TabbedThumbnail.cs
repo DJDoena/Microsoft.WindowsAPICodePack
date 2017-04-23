@@ -162,7 +162,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 if (_title != value)
                 {
                     _title = value;
-                    if (TitleChanged != null) { TitleChanged(this, EventArgs.Empty); }
+                    if (TitleChanged != null)
+                    { TitleChanged(this, EventArgs.Empty); }
                 }
             }
         }
@@ -180,7 +181,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 if (_tooltip != value)
                 {
                     _tooltip = value;
-                    if (TooltipChanged != null) { TooltipChanged(this, EventArgs.Empty); }
+                    if (TooltipChanged != null)
+                    { TooltipChanged(this, EventArgs.Empty); }
                 }
             }
         }
@@ -437,7 +439,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
 
                 closedHandler(this, closingEvent);
 
-                if (closingEvent.Cancel) { return false; }                
+                if (closingEvent.Cancel)
+                { return false; }
             }
             else
             {
@@ -546,7 +549,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             {
                 _taskbarWindow = null;
 
-                if (Icon != null) { Icon.Dispose(); }
+                if (Icon != null)
+                { Icon.Dispose(); }
                 Icon = null;
 
                 _title = null;

@@ -34,7 +34,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             // Get the System.ItemType property
             string itemType = ShellHelper.GetItemType(nativeShellItem2);
 
-            if (!string.IsNullOrEmpty(itemType)) { itemType = itemType.ToUpperInvariant(); }
+            if (!string.IsNullOrEmpty(itemType))
+            { itemType = itemType.ToUpperInvariant(); }
 
             // Get some IShellItem attributes
             ShellNativeMethods.ShellFileGetAttributesOptions sfgao;
@@ -97,7 +98,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             }
 
             // 6. If this is an entity (single item), check if its filesystem or not
-            if (isFileSystem) { return new ShellFile(nativeShellItem2); }
+            if (isFileSystem)
+            { return new ShellFile(nativeShellItem2); }
 
             return new ShellNonFileSystemItem(nativeShellItem2);
         }
@@ -193,7 +195,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             IShellItem2 nativeShellItem;
             int retCode = ShellNativeMethods.SHCreateItemFromIDList(idListPtr, ref guid, out nativeShellItem);
 
-            if (!CoreErrorHelper.Succeeded(retCode)) { return null; }
+            if (!CoreErrorHelper.Succeeded(retCode))
+            { return null; }
             return ShellObjectFactory.Create(nativeShellItem);
         }
 
@@ -212,7 +215,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
                 parent.NativeShellFolder,
                 idListPtr, out nativeShellItem);
 
-            if (!CoreErrorHelper.Succeeded(retCode)) { return null; }
+            if (!CoreErrorHelper.Succeeded(retCode))
+            { return null; }
 
             return ShellObjectFactory.Create(nativeShellItem);
         }

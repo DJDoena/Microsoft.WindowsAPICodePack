@@ -14,7 +14,7 @@ namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
 
     #region Property System COM Interfaces
 
-    [ComImport]    
+    [ComImport]
     [Guid(ShellIIDGuid.IPropertyStoreCapabilities)]
     [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     interface IPropertyStoreCapabilities

@@ -60,7 +60,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             }
             set
             {
-                if (value == null) { return; }
+                if (value == null)
+                { return; }
 
                 internalTargetLocation = value;
 
@@ -86,7 +87,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
         {
             get
             {
-                if (NativeShellItem2 != null) { return this.Properties.System.Title.Value; }
+                if (NativeShellItem2 != null)
+                { return this.Properties.System.Title.Value; }
                 return null;
             }
             set

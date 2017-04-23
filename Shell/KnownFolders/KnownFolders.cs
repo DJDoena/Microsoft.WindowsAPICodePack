@@ -1,4 +1,4 @@
-//Copyright (c) Microsoft Corporation.  All rights reserved.
+﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
     /// Defines properties for known folders that identify the path of standard known folders.
     /// </summary>
     public static class KnownFolders
-    {        
+    {
         /// <summary>
         /// Gets a strongly-typed read-only collection of all the registered known folders.
         /// </summary>
@@ -55,13 +55,15 @@ namespace Microsoft.WindowsAPICodePack.Shell
 
                         // Add to our collection if it's not null (some folders might not exist on the system
                         // or we could have an exception that resulted in the null return from above method call
-                        if (kf != null) { foldersList.Add(kf); }
+                        if (kf != null)
+                        { foldersList.Add(kf); }
                     }
                 }
             }
             finally
             {
-                if (folders != IntPtr.Zero) { Marshal.FreeCoTaskMem(folders); }
+                if (folders != IntPtr.Zero)
+                { Marshal.FreeCoTaskMem(folders); }
             }
 
             return new ReadOnlyCollection<IKnownFolder>(foldersList);

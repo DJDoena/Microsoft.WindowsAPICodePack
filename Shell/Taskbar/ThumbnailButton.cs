@@ -311,14 +311,16 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
 
         internal void UpdateThumbnailButton()
         {
-            if (internalUpdate || !AddedToTaskbar) { return; }
+            if (internalUpdate || !AddedToTaskbar)
+            { return; }
 
             // Get the array of thumbnail buttons in native format
             ThumbButton[] nativeButtons = { Win32ThumbButton };
 
             HResult hr = TaskbarList.Instance.ThumbBarUpdateButtons(WindowHandle, 1, nativeButtons);
 
-            if (!CoreErrorHelper.Succeeded(hr)) { throw new ShellException(hr); }
+            if (!CoreErrorHelper.Succeeded(hr))
+            { throw new ShellException(hr); }
         }
 
         #endregion

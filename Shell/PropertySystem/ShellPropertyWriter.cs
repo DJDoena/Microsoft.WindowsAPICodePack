@@ -171,7 +171,8 @@ namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
         /// <param name="allowTruncatedValue">True to allow truncation (default); otherwise False.</param>
         public void WriteProperty(IShellProperty shellProperty, object value, bool allowTruncatedValue)
         {
-            if (shellProperty == null) { throw new ArgumentNullException("shellProperty"); }
+            if (shellProperty == null)
+            { throw new ArgumentNullException("shellProperty"); }
             WriteProperty(shellProperty.PropertyKey, value, allowTruncatedValue);
         }
 
@@ -195,7 +196,8 @@ namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
         /// <param name="allowTruncatedValue">True to allow truncation (default); otherwise False.</param>
         public void WriteProperty<T>(ShellProperty<T> shellProperty, T value, bool allowTruncatedValue)
         {
-            if (shellProperty == null) { throw new ArgumentNullException("shellProperty"); }
+            if (shellProperty == null)
+            { throw new ArgumentNullException("shellProperty"); }
             WriteProperty(shellProperty.PropertyKey, value, allowTruncatedValue);
         }
 

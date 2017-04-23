@@ -296,7 +296,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             // Options passed in: Resize to fit
             HResult hr = ((IShellItemImageFactory)shellItemNative).GetImage(nativeSIZE, CalculateFlags(), out hbitmap);
 
-            if (hr == HResult.Ok) { return hbitmap; }
+            if (hr == HResult.Ok)
+            { return hbitmap; }
             else if ((uint)hr == 0x8004B200 && FormatOption == ShellThumbnailFormatOption.ThumbnailOnly)
             {
                 // Thumbnail was requested, but this ShellItem doesn't have a thumbnail.

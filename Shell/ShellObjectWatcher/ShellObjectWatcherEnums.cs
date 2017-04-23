@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace Microsoft.WindowsAPICodePack.Shell
-{    
+{
     /// <summary>
     /// Describes the event that has occurred. 
     /// Typically, only one event is specified at a time. 

@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft Corporation.  All rights reserved.
+﻿// Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System.Runtime.InteropServices;
 using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
@@ -69,7 +69,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <returns>Returns true if the objects are equal; false otherwise.</returns>
         public override bool Equals(object obj)
         {
-            if (obj == null || obj.GetType() != typeof(SortColumn)) { return false; }
+            if (obj == null || obj.GetType() != typeof(SortColumn))
+            { return false; }
             return (this == (SortColumn)obj);
         }
 

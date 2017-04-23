@@ -1,9 +1,9 @@
-//Copyright (c) Microsoft Corporation.  All rights reserved.
+﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
 using System.Runtime.InteropServices;
 using MS.WindowsAPICodePack.Internal;
-using Microsoft.WindowsAPICodePack.Shell.Interop;
+//using Microsoft.WindowsAPICodePack.Shell.Interop;
 using Microsoft.WindowsAPICodePack.Shell;
 
 namespace Microsoft.WindowsAPICodePack.Taskbar
@@ -14,7 +14,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
 
         internal const int ForceIconicRepresentation = 7;
         internal const int HasIconicBitmap = 10;
-        
+
         internal const uint WmDwmSendIconicThumbnail = 0x0323;
         internal const uint WmDwmSendIconicLivePreviewBitmap = 0x0326;
 

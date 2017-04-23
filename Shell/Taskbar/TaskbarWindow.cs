@@ -86,7 +86,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         {
             if (TabbedThumbnailProxyWindow == null)
             {
-                throw new InvalidOperationException(LocalizedMessages.TasbarWindowProxyWindowSet);                
+                throw new InvalidOperationException(LocalizedMessages.TasbarWindowProxyWindowSet);
             }
             TabbedThumbnailProxyWindow.Text = title;
         }
@@ -144,7 +144,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
 
         internal TaskbarWindow(TabbedThumbnail preview)
         {
-            if (preview == null) { throw new ArgumentNullException("preview"); }
+            if (preview == null)
+            { throw new ArgumentNullException("preview"); }
 
             // Create our proxy window
             // Bug: This is only called in this constructor.  Which will cause the property 

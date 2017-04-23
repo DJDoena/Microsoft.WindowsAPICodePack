@@ -19,7 +19,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
 
         internal ShellSearchConnector(IShellItem2 shellItem)
             : this()
-        {            
+        {
             nativeShellItem = shellItem;
         }
 

@@ -1,14 +1,9 @@
 ﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
-using System;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.Resources;
+using System.Runtime.CompilerServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
 [assembly: AssemblyTitle("Microsoft.WindowsAPICodePack")]
 [assembly: AssemblyDescription("WindowsAPICodePack Core")]
 [assembly: AssemblyConfiguration("")]
@@ -18,26 +13,16 @@ using System.Resources;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
+[assembly: InternalsVisibleTo("Microsoft.WindowsAPICodePack.Shell,PublicKey="
+    + "002400000480000094000000060200000024000052534131000400000100010081589da8ad919c"
+    + "b9ffdeadb8ddf4e37040d740f0ce43f682900b2d9cba44d2b076a3597fd9a861ef1bc4cd9ad9b3"
+    + "aa07a0396fb4d474ebb72d7b3ca7e70d73937896662c5f6eecf5f2a1ed5fff653069d8ca8bd3f3"
+    + "3cbbf6c686e140a1757aa0c22d7a9e5730984dcc004d5a8d437eba575d2d6a035fa210cd15ec88"
+    + "58d04b9e")]
 
-[assembly: InternalsVisibleTo("Microsoft.WindowsAPICodePack.Shell")]
-[assembly: InternalsVisibleTo("Microsoft.WindowsAPICodePack.Sensors")]
-[assembly: InternalsVisibleTo("Microsoft.WindowsAPICodePack.ShellExtensions")]
-
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ac9740bc-3035-43ee-9a68-1dde36ab1f5e")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
 [assembly: AssemblyVersion("1.1.0.0")]
 [assembly: AssemblyFileVersion("1.1.0.0")]
+
 [assembly: NeutralResourcesLanguageAttribute("en")]
+
+[assembly: AssemblyDelaySign(false)]

@@ -600,7 +600,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
             NonIndexableLocationWarning = 1
         };
 
-        
+
         #endregion
 
         #region Shell Library Helper Methods

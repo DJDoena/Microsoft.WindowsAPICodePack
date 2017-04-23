@@ -49,7 +49,8 @@ namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
                 ((IPropertyDescription2)Description.NativePropertyDescription).GetImageReferenceForValue(
                     propVar, out refPath);
 
-                if (refPath == null) { return; }
+                if (refPath == null)
+                { return; }
 
                 int index = ShellNativeMethods.PathParseIconLocation(ref refPath);
                 if (refPath != null)

@@ -55,7 +55,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         /// </remarks>
         public void AddButtons(UIElement control, params ThumbnailToolBarButton[] buttons)
         {
-            if (control == null) { throw new ArgumentNullException("control"); }
+            if (control == null)
+            { throw new ArgumentNullException("control"); }
             VerifyButtons(buttons);
 
             // Add the buttons to our window manager, which will also create a proxy window

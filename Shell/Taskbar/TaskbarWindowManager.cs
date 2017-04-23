@@ -32,7 +32,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             }
             catch
             {
-                if (temp != null) { temp.Dispose(); }
+                if (temp != null)
+                { temp.Dispose(); }
                 throw;
             }
         }
@@ -51,7 +52,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             }
             catch
             {
-                if (temp != null) { temp.Dispose(); }
+                if (temp != null)
+                { temp.Dispose(); }
                 throw;
             }
         }
@@ -135,7 +137,8 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
 
         internal static TaskbarWindow GetTaskbarWindow(System.Windows.UIElement windowsControl, TaskbarProxyWindowType taskbarProxyWindowType)
         {
-            if (windowsControl == null) { throw new ArgumentNullException("windowsControl"); }
+            if (windowsControl == null)
+            { throw new ArgumentNullException("windowsControl"); }
 
             TaskbarWindow toReturn = _taskbarWindowList.FirstOrDefault(window =>
             {
@@ -521,7 +524,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             {
                 // Raise the event
                 taskbarWindow.TabbedThumbnail.OnTabbedThumbnailClosed();
-                
+
                 // Remove the taskbar window from our internal list
                 if (_taskbarWindowList.Contains(taskbarWindow))
                 {
@@ -742,7 +745,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 button.AddedToTaskbar = _buttonsAdded;
             }
         }
-        
+
         #region Event handlers
 
         private static void thumbnailPreview_TooltipChanged(object sender, EventArgs e)

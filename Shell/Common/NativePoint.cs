@@ -19,7 +19,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
             X = x;
             Y = y;
         }
-        
+
         /// <summary>
         /// The X coordinate of the point
         /// </summary>        

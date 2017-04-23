@@ -1,4 +1,4 @@
-//Copyright (c) Microsoft Corporation.  All rights reserved.
+﻿//Copyright (c) Microsoft Corporation.  All rights reserved.
 
 using System;
 using System.Runtime.CompilerServices;
@@ -118,12 +118,12 @@ namespace Microsoft.WindowsAPICodePack.Shell
             MethodCodeType = MethodCodeType.Runtime)]
         void Redirect();
     }
-    
+
     [ComImport]
     [Guid("4df0c730-df9d-4ae3-9153-aa6b82e9795a")]
     internal class KnownFolderManagerClass : IKnownFolderManager
     {
-        
+
         [MethodImpl(MethodImplOptions.InternalCall,
             MethodCodeType = MethodCodeType.Runtime)]
         public virtual extern void FolderIdFromCsidl(int csidl,
@@ -146,7 +146,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
             MethodCodeType = MethodCodeType.Runtime)]
         public virtual extern HResult GetFolder(
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid id,
-            [Out, MarshalAs(UnmanagedType.Interface)] 
+            [Out, MarshalAs(UnmanagedType.Interface)]
               out IKnownFolderNative knownFolder);
 
         [MethodImpl(MethodImplOptions.InternalCall,

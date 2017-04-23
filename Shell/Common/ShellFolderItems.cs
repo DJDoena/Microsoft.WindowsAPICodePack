@@ -66,8 +66,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
             if (nativeEnumIdList != null)
             {
                 Marshal.ReleaseComObject(nativeEnumIdList);
-                nativeEnumIdList = null;                
-            }            
+                nativeEnumIdList = null;
+            }
         }
 
         #endregion
@@ -86,14 +86,16 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <returns></returns>
         public bool MoveNext()
         {
-            if (nativeEnumIdList == null) { return false; }
+            if (nativeEnumIdList == null)
+            { return false; }
 
             IntPtr item;
             uint numItemsReturned;
             uint itemsRequested = 1;
             HResult hr = nativeEnumIdList.Next(itemsRequested, out item, out numItemsReturned);
 
-            if (numItemsReturned < itemsRequested || hr != HResult.Ok) { return false; }
+            if (numItemsReturned < itemsRequested || hr != HResult.Ok)
+            { return false; }
 
             currentItem = ShellObjectFactory.Create(item, nativeShellFolder);
 

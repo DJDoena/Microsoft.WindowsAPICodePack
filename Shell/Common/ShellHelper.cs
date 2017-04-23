@@ -16,7 +16,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
     {
         internal static string GetParsingName(IShellItem shellItem)
         {
-            if (shellItem == null) { return null; }
+            if (shellItem == null)
+            { return null; }
 
             string path = null;
 
@@ -54,9 +55,10 @@ namespace Microsoft.WindowsAPICodePack.Shell
         {
             if (shellItem != null)
             {
-                string itemType = null;                
+                string itemType = null;
                 HResult hr = shellItem.GetString(ref ItemTypePropertyKey, out itemType);
-                if (hr == HResult.Ok) { return itemType; }
+                if (hr == HResult.Ok)
+                { return itemType; }
             }
 
             return null;

@@ -334,7 +334,8 @@ namespace Microsoft.WindowsAPICodePack.Shell
         {
             get
             {
-                if (thumbnail == null) { thumbnail = new ShellThumbnail(this); }
+                if (thumbnail == null)
+                { thumbnail = new ShellThumbnail(this); }
                 return thumbnail;
             }
         }

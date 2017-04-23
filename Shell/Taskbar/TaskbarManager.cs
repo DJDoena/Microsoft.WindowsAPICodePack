@@ -116,21 +116,21 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 Convert.ToUInt32(maximumValue));
         }
 
-        /// <summary>
-        /// Displays or updates a progress bar hosted in a taskbar button of the given WPF window 
-        /// to show the specific percentage completed of the full operation.
-        /// </summary>
-        /// <param name="window">The window whose associated taskbar button is being used as a progress indicator. 
-        /// This window belong to a calling process associated with the button's application and must be already loaded.</param>
-        /// <param name="currentValue">An application-defined value that indicates the proportion of the operation that has been completed at the time the method is called.</param>
-        /// <param name="maximumValue">An application-defined value that specifies the value currentValue will have when the operation is complete.</param>
-        public void SetProgressValue(int currentValue, int maximumValue, System.Windows.Window window)
-        {
-            TaskbarList.Instance.SetProgressValue(
-                (new WindowInteropHelper(window)).Handle,
-                Convert.ToUInt32(currentValue),
-                Convert.ToUInt32(maximumValue));
-        }
+        ///// <summary>
+        ///// Displays or updates a progress bar hosted in a taskbar button of the given WPF window 
+        ///// to show the specific percentage completed of the full operation.
+        ///// </summary>
+        ///// <param name="window">The window whose associated taskbar button is being used as a progress indicator. 
+        ///// This window belong to a calling process associated with the button's application and must be already loaded.</param>
+        ///// <param name="currentValue">An application-defined value that indicates the proportion of the operation that has been completed at the time the method is called.</param>
+        ///// <param name="maximumValue">An application-defined value that specifies the value currentValue will have when the operation is complete.</param>
+        //public void SetProgressValue(int currentValue, int maximumValue, System.Windows.Window window)
+        //{
+        //    TaskbarList.Instance.SetProgressValue(
+        //        (new WindowInteropHelper(window)).Handle,
+        //        Convert.ToUInt32(currentValue),
+        //        Convert.ToUInt32(maximumValue));
+        //}
 
         /// <summary>
         /// Sets the type and state of the progress indicator displayed on a taskbar button of the main application window.
@@ -153,19 +153,19 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             TaskbarList.Instance.SetProgressState(windowHandle, (TaskbarProgressBarStatus)state);
         }
 
-        /// <summary>
-        /// Sets the type and state of the progress indicator displayed on a taskbar button 
-        /// of the given WPF window
-        /// </summary>
-        /// <param name="window">The window whose associated taskbar button is being used as a progress indicator. 
-        /// This window belong to a calling process associated with the button's application and must be already loaded.</param>
-        /// <param name="state">Progress state of the progress button</param>
-        public void SetProgressState(TaskbarProgressBarState state, System.Windows.Window window)
-        {
-            TaskbarList.Instance.SetProgressState(
-                (new WindowInteropHelper(window)).Handle,
-                (TaskbarProgressBarStatus)state);
-        }
+        ///// <summary>
+        ///// Sets the type and state of the progress indicator displayed on a taskbar button 
+        ///// of the given WPF window
+        ///// </summary>
+        ///// <param name="window">The window whose associated taskbar button is being used as a progress indicator. 
+        ///// This window belong to a calling process associated with the button's application and must be already loaded.</param>
+        ///// <param name="state">Progress state of the progress button</param>
+        //public void SetProgressState(TaskbarProgressBarState state, System.Windows.Window window)
+        //{
+        //    TaskbarList.Instance.SetProgressState(
+        //        (new WindowInteropHelper(window)).Handle,
+        //        (TaskbarProgressBarStatus)state);
+        //}
 
         private TabbedThumbnailManager _tabbedThumbnail;
         /// <summary>
@@ -229,9 +229,9 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         /// Sets the handle of the window whose taskbar button will be used
         /// to display progress.
         /// </summary>
-        internal IntPtr OwnerHandle
+        public IntPtr OwnerHandle
         {
-            get
+            internal get
             {
                 if (_ownerHandle == IntPtr.Zero)
                 {
@@ -246,6 +246,10 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 }
 
                 return _ownerHandle;
+            }
+            set
+            {
+                _ownerHandle = value;
             }
         }
 
