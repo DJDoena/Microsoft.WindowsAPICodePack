@@ -3,8 +3,8 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Interop;
-using MS.WindowsAPICodePack.Internal;
 using Microsoft.WindowsAPICodePack.Shell.Resources;
+using MS.WindowsAPICodePack.Internal;
 
 namespace Microsoft.WindowsAPICodePack.Taskbar
 {

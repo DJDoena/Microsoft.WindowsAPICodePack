@@ -3,10 +3,9 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Threading;
 using Microsoft.WindowsAPICodePack.Shell.Resources;
 using MS.WindowsAPICodePack.Internal;
-using System.Linq;
-using System.Threading;
 
 namespace Microsoft.WindowsAPICodePack.Shell
 {

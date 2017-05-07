@@ -2,8 +2,6 @@
 
 using System;
 using Microsoft.WindowsAPICodePack.Taskbar;
-using MS.WindowsAPICodePack.Internal;
-//using Microsoft.WindowsAPICodePack.Shell.Interop;
 
 namespace Microsoft.WindowsAPICodePack.Shell
 {

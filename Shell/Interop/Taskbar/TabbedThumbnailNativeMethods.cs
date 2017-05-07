@@ -2,8 +2,6 @@
 
 using System;
 using System.Runtime.InteropServices;
-using MS.WindowsAPICodePack.Internal;
-//using Microsoft.WindowsAPICodePack.Shell.Interop;
 using Microsoft.WindowsAPICodePack.Shell;
 
 namespace Microsoft.WindowsAPICodePack.Taskbar
