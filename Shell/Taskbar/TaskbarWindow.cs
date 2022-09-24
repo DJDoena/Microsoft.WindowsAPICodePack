@@ -112,7 +112,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             EnableTabbedThumbnails = false;
 
             //
-            this.ThumbnailButtons = buttons;
+            ThumbnailButtons = buttons;
             UserWindowHandle = userWindowHandle;
             WindowsControl = null;
         }
@@ -137,7 +137,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             EnableThumbnailToolbars = true;
             EnableTabbedThumbnails = false;
 
-            this.ThumbnailButtons = buttons;
+            ThumbnailButtons = buttons;
             UserWindowHandle = IntPtr.Zero;
             WindowsControl = windowsControl;
         }

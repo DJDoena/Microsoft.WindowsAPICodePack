@@ -216,7 +216,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
 
             protected set
             {
-                this._internalName = value;
+                _internalName = value;
             }
         }
 
@@ -237,7 +237,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
             }
             set
             {
-                this._internalPIDL = value;
+                _internalPIDL = value;
             }
         }
 
@@ -247,7 +247,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <returns>A string representation of the object.</returns>
         public override string ToString()
         {
-            return this.Name;
+            return Name;
         }
 
         /// <summary>
@@ -462,7 +462,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
             }
             return hashValue.Value;
         }
-        private static MD5CryptoServiceProvider hashProvider = new MD5CryptoServiceProvider();
+        private static readonly MD5CryptoServiceProvider hashProvider = new MD5CryptoServiceProvider();
         private int? hashValue;
 
         /// <summary>
@@ -476,7 +476,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
 
             if (other != null)
             {
-                IShellItem ifirst = this.NativeShellItem;
+                IShellItem ifirst = NativeShellItem;
                 IShellItem isecond = other.NativeShellItem;
                 if (ifirst != null && isecond != null)
                 {
@@ -498,7 +498,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <returns>Equality result.</returns>
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as ShellObject);
+            return Equals(obj as ShellObject);
         }
 
         /// <summary>

@@ -146,8 +146,8 @@ namespace MS.WindowsAPICodePack.Internal
         }
 
         // A dictionary and lock to contain compiled expression trees for constructors
-        private static Dictionary<Type, Func<object, PropVariant>> _cache = new Dictionary<Type, Func<object, PropVariant>>();
-        private static object _padlock = new object();
+        private static readonly Dictionary<Type, Func<object, PropVariant>> _cache = new Dictionary<Type, Func<object, PropVariant>>();
+        private static readonly object _padlock = new object();
 
         // Retrieves a cached constructor expression.
         // If no constructor has been cached, it attempts to find/add it.  If it cannot be found
@@ -191,12 +191,12 @@ namespace MS.WindowsAPICodePack.Internal
         #region Fields
 
         [FieldOffset(0)]
-        decimal _decimal;
+        private readonly decimal _decimal;
 
         // This is actually a VarEnum value, but the VarEnum type
         // requires 4 bytes instead of the expected 2.
         [FieldOffset(0)]
-        ushort _valueType;
+        private ushort _valueType;
 
         // Reserved Fields
         //[FieldOffset(2)]
@@ -216,30 +216,30 @@ namespace MS.WindowsAPICodePack.Internal
         // architectures.
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2006:UseSafeHandleToEncapsulateNativeResources")]
         [FieldOffset(12)]
-        IntPtr _ptr2;
+        private readonly IntPtr _ptr2;
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2006:UseSafeHandleToEncapsulateNativeResources")]
         [FieldOffset(8)]
-        IntPtr _ptr;
+        private IntPtr _ptr;
         [FieldOffset(8)]
-        Int32 _int32;
+        private readonly Int32 _int32;
         [FieldOffset(8)]
-        UInt32 _uint32;
+        private readonly UInt32 _uint32;
         [FieldOffset(8)]
-        byte _byte;
+        private readonly byte _byte;
         [FieldOffset(8)]
-        sbyte _sbyte;
+        private readonly sbyte _sbyte;
         [FieldOffset(8)]
-        short _short;
+        private readonly short _short;
         [FieldOffset(8)]
-        ushort _ushort;
+        private readonly ushort _ushort;
         [FieldOffset(8)]
-        long _long;
+        private readonly long _long;
         [FieldOffset(8)]
-        ulong _ulong;
+        private readonly ulong _ulong;
         [FieldOffset(8)]
-        double _double;
+        private readonly double _double;
         [FieldOffset(8)]
-        float _float;
+        private readonly float _float;
 
         #endregion // struct fields
 

@@ -20,7 +20,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         }
 
         // Best practice recommends defining a private object to lock on
-        private static object _syncLock = new object();
+        private static readonly object _syncLock = new object();
 
         private static TaskbarManager _instance;
         /// <summary>

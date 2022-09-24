@@ -484,7 +484,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         internal struct ThumbnailId
         {
             [MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 16)]
-            byte rgbKey;
+            private readonly byte rgbKey;
         }
 
         #endregion

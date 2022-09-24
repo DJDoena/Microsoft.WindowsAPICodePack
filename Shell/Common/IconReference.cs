@@ -14,7 +14,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
 
         private string moduleName;
         private string referencePath;
-        static private char[] commaSeparator = new char[] { ',' };
+        private static readonly char[] commaSeparator = new char[] { ',' };
 
         #endregion
 
@@ -59,7 +59,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
             moduleName = refParams[0];
             ResourceId = int.Parse(refParams[1], System.Globalization.CultureInfo.InvariantCulture);
 
-            this.referencePath = refPath;
+            referencePath = refPath;
         }
 
         /// <summary>
@@ -158,9 +158,9 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// <returns>A hash code.</returns>
         public override int GetHashCode()
         {
-            int hash = this.moduleName.GetHashCode();
-            hash = hash * 31 + this.referencePath.GetHashCode();
-            hash = hash * 31 + this.ResourceId.GetHashCode();
+            int hash = moduleName.GetHashCode();
+            hash = hash * 31 + referencePath.GetHashCode();
+            hash = hash * 31 + ResourceId.GetHashCode();
             return hash;
         }
 

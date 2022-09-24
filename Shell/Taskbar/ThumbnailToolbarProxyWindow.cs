@@ -10,7 +10,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
     internal class ThumbnailToolbarProxyWindow : NativeWindow, IDisposable
     {
         private ThumbnailToolBarButton[] _thumbnailButtons;
-        private IntPtr _internalWindowHandle;
+        private readonly IntPtr _internalWindowHandle;
 
         internal System.Windows.UIElement WindowsControl { get; set; }
 
@@ -18,7 +18,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         {
             get
             {
-                return _internalWindowHandle != IntPtr.Zero ? _internalWindowHandle : this.Handle;
+                return _internalWindowHandle != IntPtr.Zero ? _internalWindowHandle : Handle;
             }
         }
 
@@ -43,7 +43,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
 
             // Assign the window handle (coming from the user) to this native window
             // so we can intercept the window messages sent from the taskbar to this window.
-            this.AssignHandle(windowHandle);
+            AssignHandle(windowHandle);
         }
 
         internal ThumbnailToolbarProxyWindow(System.Windows.UIElement windowsControl, ThumbnailToolBarButton[] buttons)
@@ -73,7 +73,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         {
             bool handled = false;
 
-            handled = TaskbarWindowManager.DispatchMessage(ref m, this.TaskbarWindow);
+            handled = TaskbarWindowManager.DispatchMessage(ref m, TaskbarWindow);
 
             // If it's a WM_Destroy message, then also forward it to the base class (our native window)
             if ((m.Msg == (int)WindowMessage.Destroy) ||

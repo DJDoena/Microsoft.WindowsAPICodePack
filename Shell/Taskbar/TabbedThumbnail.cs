@@ -56,7 +56,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 // The user has updated the clipping region, so invalidate our existing preview
                 if (ClippingRectangle != null)
                 {
-                    TaskbarWindowManager.InvalidatePreview(this.TaskbarWindow);
+                    TaskbarWindowManager.InvalidatePreview(TaskbarWindow);
                 }
             }
         }
@@ -231,7 +231,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
                 _clippingRectangle = value;
 
                 // The user has updated the clipping region, so invalidate our existing preview
-                TaskbarWindowManager.InvalidatePreview(this.TaskbarWindow);
+                TaskbarWindowManager.InvalidatePreview(TaskbarWindow);
             }
         }
 
@@ -473,13 +473,13 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
             {
                 TabbedThumbnailBitmapRequestedEventArgs eventArgs = null;
 
-                if (this.WindowHandle != IntPtr.Zero)
+                if (WindowHandle != IntPtr.Zero)
                 {
-                    eventArgs = new TabbedThumbnailBitmapRequestedEventArgs(this.WindowHandle);
+                    eventArgs = new TabbedThumbnailBitmapRequestedEventArgs(WindowHandle);
                 }
-                else if (this.WindowsControl != null)
+                else if (WindowsControl != null)
                 {
-                    eventArgs = new TabbedThumbnailBitmapRequestedEventArgs(this.WindowsControl);
+                    eventArgs = new TabbedThumbnailBitmapRequestedEventArgs(WindowsControl);
                 }
 
                 TabbedThumbnailBitmapRequested(this, eventArgs);
@@ -490,13 +490,13 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         {
             TabbedThumbnailClosedEventArgs eventArgs = null;
 
-            if (this.WindowHandle != IntPtr.Zero)
+            if (WindowHandle != IntPtr.Zero)
             {
-                eventArgs = new TabbedThumbnailClosedEventArgs(this.WindowHandle);
+                eventArgs = new TabbedThumbnailClosedEventArgs(WindowHandle);
             }
-            else if (this.WindowsControl != null)
+            else if (WindowsControl != null)
             {
-                eventArgs = new TabbedThumbnailClosedEventArgs(this.WindowsControl);
+                eventArgs = new TabbedThumbnailClosedEventArgs(WindowsControl);
             }
 
             return eventArgs;
@@ -506,13 +506,13 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         {
             TabbedThumbnailEventArgs eventArgs = null;
 
-            if (this.WindowHandle != IntPtr.Zero)
+            if (WindowHandle != IntPtr.Zero)
             {
-                eventArgs = new TabbedThumbnailEventArgs(this.WindowHandle);
+                eventArgs = new TabbedThumbnailEventArgs(WindowHandle);
             }
-            else if (this.WindowsControl != null)
+            else if (WindowsControl != null)
             {
-                eventArgs = new TabbedThumbnailEventArgs(this.WindowsControl);
+                eventArgs = new TabbedThumbnailEventArgs(WindowsControl);
             }
 
             return eventArgs;

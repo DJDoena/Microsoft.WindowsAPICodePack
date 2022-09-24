@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.WindowsAPICodePack.Shell</RootNamespace>
-    <AssemblyName>Microsoft.WindowsAPICodePack.Shell</AssemblyName>
+    <AssemblyName>DoenaSoft.WindowsAPICodePack.Shell</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -42,7 +42,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\x86\Shell\Microsoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
+    <DocumentationFile>bin\x86\Shell\DoenaSoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
     <CodeAnalysisRules>
     </CodeAnalysisRules>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
@@ -63,7 +63,7 @@
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\x64\Debug\Microsoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
+    <DocumentationFile>bin\x64\Debug\DoenaSoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <NoWarn>CS1574</NoWarn>
   </PropertyGroup>
@@ -76,7 +76,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
     <Optimize>true</Optimize>
-    <DocumentationFile>bin\x86\Release\Microsoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
+    <DocumentationFile>bin\x86\Release\DoenaSoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
     <NoWarn>CS1574</NoWarn>
@@ -90,7 +90,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\x64\Release\Microsoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
+    <DocumentationFile>bin\x64\Release\DoenaSoft.WindowsAPICodePack.Shell.xml</DocumentationFile>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <NoWarn>CS1574</NoWarn>

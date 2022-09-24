@@ -137,7 +137,7 @@ namespace Microsoft.WindowsAPICodePack.Taskbar
         public static extern int SHGetPropertyStoreForWindow(
             IntPtr hwnd,
             ref Guid iid /*IID_IPropertyStore*/,
-            [Out(), MarshalAs(UnmanagedType.Interface)]out IPropertyStore propertyStore);
+            [Out(), MarshalAs(UnmanagedType.Interface)] out IPropertyStore propertyStore);
 
         /// <summary>
         /// Sets the window's application id by its window handle.

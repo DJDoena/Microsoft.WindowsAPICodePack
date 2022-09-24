@@ -11,7 +11,7 @@ namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
             propsDictionary = new Dictionary<PropertyKey, ShellPropertyDescription>();
         }
 
-        private IDictionary<PropertyKey, ShellPropertyDescription> propsDictionary;
+        private readonly IDictionary<PropertyKey, ShellPropertyDescription> propsDictionary;
         private static ShellPropertyDescriptionsCache cacheInstance;
 
         public static ShellPropertyDescriptionsCache Cache

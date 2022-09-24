@@ -20,9 +20,9 @@ namespace Microsoft.WindowsAPICodePack.Shell
         #region Private Fields
 
         private INativeShellLibrary nativeShellLibrary;
-        private IKnownFolder knownFolder;
+        private readonly IKnownFolder knownFolder;
 
-        private static Guid[] FolderTypesGuids =
+        private static readonly Guid[] FolderTypesGuids =
         {
             new Guid(ShellKFIDGuid.GenericLibrary),
             new Guid(ShellKFIDGuid.DocumentsLibrary),
@@ -105,7 +105,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
                 throw new ArgumentException(LocalizedMessages.ShellLibraryEmptyName, "libraryName");
             }
 
-            this.Name = libraryName;
+            Name = libraryName;
             Guid guid = new Guid(ShellKFIDGuid.Libraries);
 
             ShellNativeMethods.LibrarySaveOptions flags = overwrite ?
@@ -133,7 +133,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
 
             knownFolder = sourceKnownFolder;
 
-            this.Name = libraryName;
+            Name = libraryName;
             Guid guid = knownFolder.FolderId;
 
             ShellNativeMethods.LibrarySaveOptions flags = overwrite ?
@@ -164,7 +164,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
                 throw new DirectoryNotFoundException(LocalizedMessages.ShellLibraryFolderNotFound);
             }
 
-            this.Name = libraryName;
+            Name = libraryName;
 
             ShellNativeMethods.LibrarySaveOptions flags = overwrite ?
                     ShellNativeMethods.LibrarySaveOptions.OverrideExisting :
@@ -361,7 +361,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// </summary>
         public void Close()
         {
-            this.Dispose();
+            Dispose();
         }
 
         #endregion

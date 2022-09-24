@@ -287,7 +287,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
     [ComImportAttribute()]
     [GuidAttribute("bcc18b79-ba16-442f-80c4-8a59c30c463b")]
     [InterfaceTypeAttribute(ComInterfaceType.InterfaceIsIUnknown)]
-    interface IShellItemImageFactory
+    internal interface IShellItemImageFactory
     {
         [PreserveSig]
         HResult GetImage(
@@ -299,7 +299,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
     [ComImport,
     Guid(ShellIIDGuid.IThumbnailCache),
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    interface IThumbnailCache
+    internal interface IThumbnailCache
     {
         void GetThumbnail([In] IShellItem pShellItem,
         [In] uint cxyRequestedThumbSize,
@@ -317,7 +317,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
     [ComImport,
     Guid(ShellIIDGuid.ISharedBitmap),
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    interface ISharedBitmap
+    internal interface ISharedBitmap
     {
         void GetSharedBitmap([Out] out IntPtr phbm);
         void GetSize([Out] out CoreNativeMethods.Size pSize);
@@ -745,7 +745,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
     [ComImport,
     Guid(ShellIIDGuid.IQuerySolution),
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    interface IQuerySolution : IConditionFactory
+    internal interface IQuerySolution : IConditionFactory
     {
         [PreserveSig]
         HResult MakeNot([In] ICondition pcSub, [In] bool fSimplify, [Out] out ICondition ppcResult);

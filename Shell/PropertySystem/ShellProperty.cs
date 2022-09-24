@@ -22,9 +22,9 @@ namespace Microsoft.WindowsAPICodePack.Shell.PropertySystem
         #region Private Fields
 
         private PropertyKey propertyKey;
-        string imageReferencePath = null;
-        int? imageReferenceIconIndex;
-        private ShellPropertyDescription description = null;
+        private string imageReferencePath = null;
+        private int? imageReferenceIconIndex;
+        private readonly ShellPropertyDescription description = null;
 
         #endregion
 

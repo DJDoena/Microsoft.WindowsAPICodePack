@@ -66,7 +66,7 @@ namespace Microsoft.WindowsAPICodePack.Shell
         /// </summary>
         public virtual string Path
         {
-            get { return this.ParsingName; }
+            get { return ParsingName; }
         }
 
         #endregion

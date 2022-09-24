@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>DoenaSoft.WindowsAPICodePack</id>
+    <version>1.1.1</version>
+    <title>DoenaSoft.WindowsAPICodePack</title>
+    <authors>DJ Doena</authors>
+    <icon>images\djdsoft.png</icon>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<license type="file">license.txt</license>
+    <projectUrl>https://github.com/DJDoena/Microsoft.WindowsAPICodePack</projectUrl>
+    <description>Adapted version of Microsoft's WindowsAPICodePack</description>
+    <copyright>2010 Microsoft</copyright>
+    <tags>WindowsAPICodePack</tags>
+  </metadata>
+  <files>
+    <file src="Shell\bin\x64\Release\DoenaSoft.WindowsAPICodePack.Core.dll" target="build\x64\DoenaSoft.WindowsAPICodePack.Core.dll" />
+    <file src="Shell\bin\x64\Release\DoenaSoft.WindowsAPICodePack.Core.xml" target="build\x64\DoenaSoft.WindowsAPICodePack.Core.xml" />
+    <file src="Shell\bin\x64\Release\DoenaSoft.WindowsAPICodePack.Shell.dll" target="build\x64\DoenaSoft.WindowsAPICodePack.Shell.dll" />
+    <file src="Shell\bin\x64\Release\DoenaSoft.WindowsAPICodePack.Shell.xml" target="build\x64\DoenaSoft.WindowsAPICodePack.Shell.xml" />
+
+    <file src="Shell\bin\x86\Release\DoenaSoft.WindowsAPICodePack.Core.dll" target="build\x86\DoenaSoft.WindowsAPICodePack.Core.dll" />
+    <file src="Shell\bin\x86\Release\DoenaSoft.WindowsAPICodePack.Core.xml" target="build\x86\DoenaSoft.WindowsAPICodePack.Core.xml" />
+    <file src="Shell\bin\x86\Release\DoenaSoft.WindowsAPICodePack.Shell.dll" target="build\x86\DoenaSoft.WindowsAPICodePack.Shell.dll" />
+    <file src="Shell\bin\x86\Release\DoenaSoft.WindowsAPICodePack.Shell.xml" target="build\x86\DoenaSoft.WindowsAPICodePack.Shell.xml" />
+    
+    <file src="DoenaSoft.WindowsAPICodePack.props" target="build\net452" />
+    <file src="djdsoft.png" target="images\" />
+    <file src="license.txt" target="" />
+</files>
+</package>

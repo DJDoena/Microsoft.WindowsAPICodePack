@@ -275,6 +275,4 @@ namespace MS.WindowsAPICodePack.Internal
 
         #endregion
     }
-
-
 }

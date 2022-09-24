@@ -8,13 +8,13 @@ using MS.WindowsAPICodePack.Internal;
 
 namespace Microsoft.WindowsAPICodePack.Shell
 {
-    class ShellFolderItems : IEnumerator<ShellObject>
+    internal class ShellFolderItems : IEnumerator<ShellObject>
     {
         #region Private Fields
 
         private IEnumIDList nativeEnumIdList;
         private ShellObject currentItem;
-        ShellContainer nativeShellFolder;
+        private readonly ShellContainer nativeShellFolder;
 
         #endregion
 
