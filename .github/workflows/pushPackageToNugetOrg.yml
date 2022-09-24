@@ -1,0 +1,46 @@
+#In this script it is important to set the RepositoryUrl in the *.csproj file
+
+name: NuGet Generation for DoenaSoft
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+      
+env:
+  SOURCE_URL: https://api.nuget.org/v3/index.json
+  SOLUTION_FILE: WindowsAPICodePack.sln
+  NUGET_SPEC: WindowsAPICodePack.nuspec
+  BUILD_CONFIGURATION: Release
+  BUILD_PLATFORMX64: x64
+  BUILD_PLATFORMX86: x86
+  
+jobs:
+  build:
+    runs-on: windows-latest
+    name: Update NuGet package
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+     
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+        
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.7
+     
+      - name: Restore Nuget
+        run: nuget.exe restore ${{ env.SOLUTION_FILE }}
+          
+      - name: Build x64
+        run: msbuild.exe ${{ env.SOLUTION_FILE }} /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:Platform=${{ env.BUILD_PLATFORMX64 }}
+
+      - name: Build x86
+        run: msbuild.exe ${{ env.SOLUTION_FILE }} /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:Platform=${{ env.BUILD_PLATFORMX86 }}
+          
+      - name: Pack Nuget
+        run: nuget.exe pack ${{ env.NUGET_SPEC }}
+
+      - name: Push Nuget
+        run: nuget.exe push *.nupkg -ApiKey ${{secrets.NUGET_API_KEY}} -Source "${{env.SOURCE_URL}}"
