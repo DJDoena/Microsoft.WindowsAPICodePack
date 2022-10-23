@@ -13,5 +13,11 @@
     <Reference Include="DoenaSoft.WindowsAPICodePack.Shell" Condition="'$(Platform)' == 'x64'">
       <HintPath>$(MSBuildThisFileDirectory)..\x64\DoenaSoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
+    <Reference Include="DoenaSoft.WindowsAPICodePack.Core" Condition="'$(Platform)' == 'AnyCPU'">
+      <HintPath>$(MSBuildThisFileDirectory)..\x64\DoenaSoft.WindowsAPICodePack.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DoenaSoft.WindowsAPICodePack.Shell" Condition="'$(Platform)' == 'AnyCPU'">
+      <HintPath>$(MSBuildThisFileDirectory)..\x64\DoenaSoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
