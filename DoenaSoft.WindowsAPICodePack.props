@@ -2,10 +2,10 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Reference Include="DoenaSoft.WindowsAPICodePack.Core">
-      <HintPath>$(MSBuildThisFileDirectory)..\x64\DoenaSoft.WindowsAPICodePack.Core.dll</HintPath>
+      <HintPath>$(MSBuildThisFileDirectory)..\DoenaSoft.WindowsAPICodePack.Core.dll</HintPath>
     </Reference>
     <Reference Include="DoenaSoft.WindowsAPICodePack.Shell">
-      <HintPath>$(MSBuildThisFileDirectory)..\x64\DoenaSoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <HintPath>$(MSBuildThisFileDirectory)..\DoenaSoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
