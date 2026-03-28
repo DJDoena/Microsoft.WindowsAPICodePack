@@ -31,12 +31,6 @@ jobs:
       - name: Restore Nuget
         run: nuget.exe restore ${{ env.SOLUTION_FILE }}
 
-      - name: Build x64
-        run: msbuild.exe ${{ env.SOLUTION_FILE }} /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:Platform=x64
-
-      - name: Build x86
-        run: msbuild.exe ${{ env.SOLUTION_FILE }} /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:Platform=x86
-
       - name: Build AnyCPU
         run: msbuild.exe ${{ env.SOLUTION_FILE }} /p:Configuration=${{ env.BUILD_CONFIGURATION }} /p:Platform="Any CPU"
 
