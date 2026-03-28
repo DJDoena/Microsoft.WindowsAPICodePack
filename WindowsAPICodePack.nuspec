@@ -2,7 +2,7 @@
 <package >
 	<metadata>
 		<id>DoenaSoft.WindowsAPICodePack</id>
-		<version>4.8.2</version>
+		<version>4.8.3</version>
 		<title>DoenaSoft.WindowsAPICodePack</title>
 		<authors>DJ Doena</authors>
 		<icon>images\djdsoft.png</icon>
@@ -12,6 +12,9 @@
 		<description>Adapted version of Microsoft's WindowsAPICodePack</description>
 		<copyright>2010 Microsoft</copyright>
 		<tags>WindowsAPICodePack</tags>
+		<dependencies>
+			<group targetFramework="net481" />
+		</dependencies>
 	</metadata>
 	<files>
 		<file src="Shell\bin\Release\DoenaSoft.WindowsAPICodePack.Core.dll" target="build\DoenaSoft.WindowsAPICodePack.Core.dll" />
@@ -19,7 +22,7 @@
 		<file src="Shell\bin\Release\DoenaSoft.WindowsAPICodePack.Shell.dll" target="build\DoenaSoft.WindowsAPICodePack.Shell.dll" />
 		<file src="Shell\bin\Release\DoenaSoft.WindowsAPICodePack.Shell.xml" target="build\DoenaSoft.WindowsAPICodePack.Shell.xml" />
 
-		<file src="DoenaSoft.WindowsAPICodePack.props" target="build\net452" />
+		<file src="DoenaSoft.WindowsAPICodePack.props" target="build\net481" />
 
 		<file src="djdsoft.png" target="images\" />
 		<file src="license.txt" target="" />
